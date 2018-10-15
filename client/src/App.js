@@ -23,7 +23,7 @@ import UserService from './services/UserService';
       }))
     }
 
-    
+
   }
   render() {
     return (
@@ -36,7 +36,7 @@ import UserService from './services/UserService';
             <InfoDisplay users={this.state.users}/>
           </div>
           <div className="info-entry">
-            <InfoEntry />
+            <InfoEntry addUser={this.addUser} />
           </div>
       </div>
     );
