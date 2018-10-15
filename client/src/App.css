@@ -4,15 +4,30 @@
 
 .navbar {
   background: #5eaada;
+  float: left;
+  width: 100vw;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
   color: white;
 }
 
 .info-display {
+  float: left;
+  width: 100vw;
+  height: 45vh;
+  margin: 0;
+  padding: 0;
   background-color: #666666;
   color: white;
 }
 
 .info-entry {
+  float: left;
+  width: 100vw;
+  height: 45vh;
+  margin: 0;
+  padding: 0;
   background-color: red;
   color: white;
 }
