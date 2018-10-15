@@ -16,6 +16,14 @@ import UserService from './services/UserService';
     componentDidMount() {
       UserService.fetchUsers().then(users => this.setState({ users }))
     }
+
+    addUser = user => {
+      UserService.createUser(user).then(user => this.setState({
+        users: this.state.users.concat(user)
+      }))
+    }
+
+    
   }
   render() {
     return (
