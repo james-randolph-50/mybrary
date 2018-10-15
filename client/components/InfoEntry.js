@@ -47,8 +47,11 @@ class InfoEntry extends Component {
                 onChange={this.handleOnChange}
                 placeholder="Number of Books Read"
             />
+                <button>Add User</button>
                 </form>
         )
     }
 
 }
+
+export default InfoEntry;
