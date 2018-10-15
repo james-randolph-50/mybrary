@@ -8,13 +8,13 @@ class App extends Component {
       <div className="App">
         <h1>MyBrary: Track the Books You've Read</h1>
           <div className="navbar">
-            <p>navbar</p>
+            <Navbar />
           </div>
           <div className="info-display">
-            <p>User data will go here</p>
+            <InfoDisplay />
           </div>
           <div className="info-entry">
-            <p>Form or something will go here</p>
+            <InfoEntry />
           </div>
       </div>
     );
