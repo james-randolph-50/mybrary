@@ -27,5 +27,28 @@ class InfoEntry extends Component {
         })
     }
 
-    
+    render() {
+        return (
+            <form onSubmit={this.handleOnSubmit}>
+            <label htmlFor="user_name">Name</label>
+            <input
+                type="text"
+                name="name"
+                value={this.state.name}
+                onChange={this.handleOnChange}
+                placeholder="Username"
+            />
+
+            <label htmlFor="books_read">Books Read</label>
+            <input
+                type="number"
+                name="books_read"
+                value={this.state.books_read}
+                onChange={this.handleOnChange}
+                placeholder="Number of Books Read"
+            />
+                </form>
+        )
+    }
+
 }
