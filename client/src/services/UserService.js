@@ -1,6 +1,6 @@
-cosnt UserService = {
-    fetchUsers: () => {
-        return fetch('/users').then(response => response.json())
+const UserService = {
+    fetchUsers() => {
+        return fetch('/api/users').then(response => response.json())
     }
 }
 
