@@ -2,8 +2,22 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import InfoDisplay from './components/InfoDisplay';
+import UserService from './services/UserService';
 
 class App extends Component {
+  class App extends Component {
+    constructor() {
+      super()
+
+      this.state = {
+        users: []
+      }
+    }
+
+    componentDidMount() {
+      UserService.fetchUsers().then(users => this.setState({ users }))
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -12,7 +26,7 @@ class App extends Component {
             <Navbar />
           </div>
           <div className="info-display">
-            <InfoDisplay />
+            <InfoDisplay users={this.state.users}/>
           </div>
           <div className="info-entry">
             <InfoEntry />
