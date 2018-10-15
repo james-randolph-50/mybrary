@@ -4,7 +4,6 @@ import './App.css';
 import InfoDisplay from './components/InfoDisplay';
 import UserService from './services/UserService';
 
-class App extends Component {
   class App extends Component {
     constructor() {
       super()
