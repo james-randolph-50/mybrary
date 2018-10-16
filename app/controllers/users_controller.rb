@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
         if @user.save
             render json: @user
         else
-            render json: { errprs: {message: "User could not be saved."}}
+            render json: { errors: {message: "User could not be saved."}}
         end
     end
 
