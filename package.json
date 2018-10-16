@@ -2,6 +2,7 @@
   "name": "mybrary",
   "private": true,
   "dependencies": {
-    "npm": "^6.4.1"
+    "npm": "^6.4.1",
+    "react-redux": "^5.0.7"
   }
 }
