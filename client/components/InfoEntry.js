@@ -30,7 +30,7 @@ class InfoEntry extends Component {
     render() {
         return (
             <form onSubmit={this.handleOnSubmit}>
-            <label htmlFor="user_name">Name</label>
+            <label htmlFor="user_name"> Name </label>
             <input
                 type="text"
                 name="name"
