@@ -24,19 +24,19 @@ import UserService from './services/UserService';
     }
 
 
-  }
+  
   render() {
     return (
       <div className="App">
         <h1>MyBrary: Track the Books You've Read</h1>
           <div className="navbar">
-            <Navbar />
+           <Navbar />
           </div>
           <div className="info-display">
             <InfoDisplay users={this.state.users}/>
           </div>
           <div className="info-entry">
-            <InfoEntry addUser={this.addUser} />
+             <InfoEntry addUser={this.addUser} />
           </div>
       </div>
     );
