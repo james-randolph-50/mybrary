@@ -1,16 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Users = ({ users }) => {
-    const renderInfo = users.map(user =>
-        <p key={user.id}>{user.name}</p>
-        )
-
-        return (
+const User = ({ user }) => {
+    return (
+        <div>
+            {user ?
             <div>
-                {renderInfo}
-            </div>
-        )
+                <h3>{user.name}</h3>
+                <p>Books Read: {user.books_read}</p>
+        </div>
+        :
+        <div>
+            ...loading
+        </div>
+    }
+    </div>
+    );
 }
 
-export default Users;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        user: state.users.find(user => user.id == ownProps.match.params.userId)
+    }
+}
+
+export default connect(mapStateToProps)(User);
