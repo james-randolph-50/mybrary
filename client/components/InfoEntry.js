@@ -5,7 +5,7 @@ class InfoEntry extends Component {
         super(props)
 
         this.state = {
-            name: ''
+            name: '',
             books_read: ''
         }
     }
