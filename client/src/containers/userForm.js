@@ -44,9 +44,21 @@ class UserForm extends Component {
                         value={books_read}
                     />
                 </div>
+
+                <button type="submit">Add User</button>
                 </form>
             </div>
         )
     }
-
 }
+
+const mapStateToProps = state => {
+    return {
+        UserFormData: state.UserFormData
+    }
+}
+
+export default connect(mapStateToProps, {
+    updateUserFormData,
+    createUser
+})(UserForm);
