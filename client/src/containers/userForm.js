@@ -14,5 +14,39 @@ class UserForm extends Component {
         this.props.updateUserFormData(currentUserFormData)
     }
 
-    
+    handleOnSubmit = event => {
+        event.preventDefault()
+        this.props.createUser(this.props.UserFormData)
+    }
+
+    render() {
+        const { name, books_read } = this.props.UserFormData;
+
+        return (
+            <div>
+                Add User
+                <form onSubmit={this.handleOnSubmit}>
+                <div>
+                    <label htmlFor="name"> Name: </label>
+                        <input
+                        type="text"
+                        onChange={this.handleOnChange}
+                        name="name"
+                        value={name}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="books_read"> Books Read: </label>
+                    <input
+                        type="number"
+                        onChange={this.handleOnChange}
+                        name="books_read"
+                        value={books_read}
+                    />
+                </div>
+                </form>
+            </div>
+        )
+    }
+
 }
