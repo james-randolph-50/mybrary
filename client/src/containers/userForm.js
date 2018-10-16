@@ -16,11 +16,11 @@ class UserForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        this.props.createUser(this.props.UserFormData)
+        this.props.createUser(this.props.userFormData)
     }
 
     render() {
-        const { name, books_read } = this.props.UserFormData;
+        const { name, books_read } = this.props.userFormData;
 
         return (
             <div>
@@ -54,7 +54,7 @@ class UserForm extends Component {
 
 const mapStateToProps = state => {
     return {
-        UserFormData: state.UserFormData
+        UserFormData: state.userFormData
     }
 }
 
